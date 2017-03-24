@@ -13,6 +13,7 @@
 		8B826B931E8471D300AE9800 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B826B911E8471D300AE9800 /* LaunchScreen.storyboard */; };
 		8B826B9E1E8471D300AE9800 /* AcronymsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B826B9D1E8471D300AE9800 /* AcronymsTests.swift */; };
 		8B826BA91E8471D300AE9800 /* AcronymsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B826BA81E8471D300AE9800 /* AcronymsUITests.swift */; };
+		8B826BB71E84870F00AE9800 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B826BB61E84870F00AE9800 /* APIManager.swift */; };
 		8B826BBA1E848A8200AE9800 /* Meaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B826BB91E848A8200AE9800 /* Meaning.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		8B826BA41E8471D300AE9800 /* AcronymsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcronymsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B826BA81E8471D300AE9800 /* AcronymsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymsUITests.swift; sourceTree = "<group>"; };
 		8B826BAA1E8471D300AE9800 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B826BB61E84870F00AE9800 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		8B826BB91E848A8200AE9800 /* Meaning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meaning.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 				8B826B941E8471D300AE9800 /* Info.plist */,
 				8B826BB91E848A8200AE9800 /* Meaning.swift */,
 				8B826B8A1E8471D300AE9800 /* AcronymTableViewController.swift */,
+				8B826BB61E84870F00AE9800 /* APIManager.swift */,
 			);
 			path = Acronyms;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B826BB71E84870F00AE9800 /* APIManager.swift in Sources */,
 				8B826BBA1E848A8200AE9800 /* Meaning.swift in Sources */,
 				8B826B8B1E8471D300AE9800 /* AcronymTableViewController.swift in Sources */,
 				8B826B891E8471D300AE9800 /* AppDelegate.swift in Sources */,
