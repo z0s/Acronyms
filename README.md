@@ -1,2 +1,2 @@
 # Acronyms
-Simple that looks up the meaning of acronyms and initialisms.
+Simple iOS application that looks up the meaning of acronyms and initialisms.
