@@ -12,7 +12,7 @@ import Foundation
 struct APIManager {
     static var searchResults = [Meaning]()
     // This helper method helps parse response JSON NSData into an array of Track objects.
-    static func updateSearchResultsForSearchTerm(_ data: Data?, searchTerm: String) {
+    static func updateSearchResultsForSearchTerm(_ data: Data?, searchTerm: String, completion: () -> Void) {
         searchResults.removeAll()
         do {
             if let data = data, let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [[String: Any]] {
@@ -23,10 +23,9 @@ struct APIManager {
                         let longForm = longFormDict["lf"] as! String
                         let meaning = Meaning(abbreviation: searchTerm, longForm: longForm)
                         searchResults.append(meaning)
+                        completion()
+                        
                     }
-                    print(searchResults)
-                } else {
-                    print("Not a dictionary")
                 }
             }
             

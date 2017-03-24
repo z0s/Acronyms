@@ -43,10 +43,6 @@ class AcronymTableViewController: UIViewController {
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(searchBarEditingEnded))
         view.addGestureRecognizer(gestureRecognizer)
         
-        for x in APIManager.searchResults {
-            meaning.append(x)
-        }
-        
         
     }
     override var prefersStatusBarHidden: Bool {
@@ -85,7 +81,17 @@ extension AcronymTableViewController : UISearchBarDelegate {
                     print(error.localizedDescription)
                 } else if let httpResponse = response as? HTTPURLResponse {
                     if httpResponse.statusCode == 200 {
-                        APIManager.updateSearchResultsForSearchTerm(data, searchTerm: searchTerm)
+                        APIManager.updateSearchResultsForSearchTerm(data, searchTerm: searchTerm, completion: {
+                            self.meaning = APIManager.searchResults
+                            for x in self.meaning {
+                                print(x.abbreviation)
+                                print(x.longForm)
+                            }
+                            
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                        })
                     }
                 }
             })
