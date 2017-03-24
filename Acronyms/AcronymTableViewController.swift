@@ -7,29 +7,11 @@
 //
 
 import UIKit
+import MBProgressHUD
+
 
 class AcronymTableViewController: UIViewController {
-    
-    lazy var tableView: UITableView = {
-        let tv = UITableView()
-        tv.delegate = self
-        tv.dataSource = self
-        tv.translatesAutoresizingMaskIntoConstraints = false
-        tv.backgroundColor = .blue
-        return tv
-    }()
-    lazy var searchBar: UISearchBar = {
-        let sb = UISearchBar()
-        sb.delegate = self
-        sb.isTranslucent = false
-        sb.placeholder = "Search for Acronyms"
-        sb.sizeToFit()
-        return sb
-    }()
-    let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
-    var dataTask: URLSessionDataTask?
-    var meaning = [Meaning]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableView)
@@ -51,11 +33,30 @@ class AcronymTableViewController: UIViewController {
     func searchBarEditingEnded() {
         view.endEditing(true)
     }
+    fileprivate lazy var tableView: UITableView = {
+        let tv = UITableView()
+        tv.delegate = self
+        tv.dataSource = self
+        tv.translatesAutoresizingMaskIntoConstraints = false
+        return tv
+    }()
+    fileprivate lazy var searchBar: UISearchBar = {
+        let sb = UISearchBar()
+        sb.delegate = self
+        sb.isTranslucent = false
+        sb.placeholder = "Search for Acronyms"
+        sb.sizeToFit()
+        return sb
+    }()
+    let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
+    var dataTask: URLSessionDataTask?
+    var meaning = [Meaning]()
     
 }
 extension AcronymTableViewController : UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+        
         if !searchBar.text!.isEmpty {
             // 1
             if dataTask != nil {
@@ -74,7 +75,9 @@ extension AcronymTableViewController : UISearchBarDelegate {
                 data, response, error in
                 // 6
                 DispatchQueue.main.async {
-                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                    //Set loading bar here
+                    let loading = MBProgressHUD.showAdded(to: self.view, animated: true)
+                    loading.label.text = "Loading"
                 }
                 // 7
                 if let error = error {
@@ -83,15 +86,12 @@ extension AcronymTableViewController : UISearchBarDelegate {
                     if httpResponse.statusCode == 200 {
                         APIManager.updateSearchResultsForSearchTerm(data, searchTerm: searchTerm, completion: {
                             self.meaning = APIManager.searchResults
-                            for x in self.meaning {
-                                print(x.abbreviation)
-                                print(x.longForm)
-                            }
-                            
-                            DispatchQueue.main.async {
-                                self.tableView.reloadData()
-                            }
                         })
+                        DispatchQueue.main.async {
+                            let stop = MBProgressHUD.hide(for: self.view, animated: true)
+                            self.tableView.reloadData()
+                            self.tableView.setContentOffset(CGPoint.zero, animated: false)
+                        }
                     }
                 }
             })
@@ -111,9 +111,7 @@ extension AcronymTableViewController : UITableViewDelegate {
 extension AcronymTableViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
-        print(meaning[indexPath.row].abbreviation)
         cell.textLabel?.text = meaning[indexPath.row].longForm
-        cell.backgroundColor = .green
         return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

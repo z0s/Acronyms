@@ -32,7 +32,6 @@ struct APIManager {
         } catch let error as NSError {
             print("Error parsing results: \(error.localizedDescription)")
         }
-        
     }
 }
 
