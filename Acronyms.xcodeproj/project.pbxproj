@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8B826B891E8471D300AE9800 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B826B881E8471D300AE9800 /* AppDelegate.swift */; };
 		8B826B8B1E8471D300AE9800 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B826B8A1E8471D300AE9800 /* ViewController.swift */; };
-		8B826B8E1E8471D300AE9800 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B826B8C1E8471D300AE9800 /* Main.storyboard */; };
 		8B826B901E8471D300AE9800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B826B8F1E8471D300AE9800 /* Assets.xcassets */; };
 		8B826B931E8471D300AE9800 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B826B911E8471D300AE9800 /* LaunchScreen.storyboard */; };
 		8B826B9E1E8471D300AE9800 /* AcronymsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B826B9D1E8471D300AE9800 /* AcronymsTests.swift */; };
@@ -37,7 +36,6 @@
 		8B826B851E8471D300AE9800 /* Acronyms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Acronyms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B826B881E8471D300AE9800 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B826B8A1E8471D300AE9800 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8B826B8D1E8471D300AE9800 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B826B8F1E8471D300AE9800 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B826B921E8471D300AE9800 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B826B941E8471D300AE9800 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,7 +97,6 @@
 			children = (
 				8B826B881E8471D300AE9800 /* AppDelegate.swift */,
 				8B826B8A1E8471D300AE9800 /* ViewController.swift */,
-				8B826B8C1E8471D300AE9800 /* Main.storyboard */,
 				8B826B8F1E8471D300AE9800 /* Assets.xcassets */,
 				8B826B911E8471D300AE9800 /* LaunchScreen.storyboard */,
 				8B826B941E8471D300AE9800 /* Info.plist */,
@@ -193,6 +190,7 @@
 				TargetAttributes = {
 					8B826B841E8471D300AE9800 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 3VMET837C5;
 						ProvisioningStyle = Automatic;
 					};
 					8B826B981E8471D300AE9800 = {
@@ -234,7 +232,6 @@
 			files = (
 				8B826B931E8471D300AE9800 /* LaunchScreen.storyboard in Resources */,
 				8B826B901E8471D300AE9800 /* Assets.xcassets in Resources */,
-				8B826B8E1E8471D300AE9800 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +293,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8B826B8C1E8471D300AE9800 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8B826B8D1E8471D300AE9800 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8B826B911E8471D300AE9800 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -412,6 +401,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3VMET837C5;
 				INFOPLIST_FILE = Acronyms/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.developer.Acronyms;
@@ -424,6 +414,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3VMET837C5;
 				INFOPLIST_FILE = Acronyms/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.developer.Acronyms;
