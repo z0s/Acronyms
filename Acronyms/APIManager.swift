@@ -25,33 +25,16 @@ struct APIManager {
                         searchResults.append(meaning)
                     }
                     print(searchResults)
+                } else {
+                    print("Not a dictionary")
                 }
-                
             }
             
-//                let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [[String:Any]] {
-//                // Get the results array
-//                guard let items = response.first else {
-//                        return
-//                }
-//                for x in items.keys {
-//                    
-//                }
-//
-//                            else {
-//                                print("Not a dictionary")
-//                            }
-//                        }
-//            } else {
-//                print("Results key not found in dictionary")
-//            }
-//        } else {
-//            print("JSON Error")
-    } catch let error as NSError {
-    print("Error parsing results: \(error.localizedDescription)")
+        } catch let error as NSError {
+            print("Error parsing results: \(error.localizedDescription)")
+        }
+        
     }
-    
-            }
 }
 
 
