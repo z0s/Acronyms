@@ -12,7 +12,7 @@ class Meaning {
     var abbreviation: String
     var longForm: String
     
-    init(abbreviation : String, longForm : String) {
+    init(abbreviation: String, longForm: String) {
         self.abbreviation = abbreviation
         self.longForm = longForm
     }

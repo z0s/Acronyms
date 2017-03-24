@@ -129,10 +129,10 @@
 		8B826B871E8471D300AE9800 /* Acronyms */ = {
 			isa = PBXGroup;
 			children = (
-				8B826BB91E848A8200AE9800 /* Meaning.swift */,
-				8B826BB81E84872400AE9800 /* Supporting Files */,
-				8B826B8A1E8471D300AE9800 /* AcronymTableViewController.swift */,
 				8B826BB61E84870F00AE9800 /* APIManager.swift */,
+				8B826BB91E848A8200AE9800 /* Meaning.swift */,
+				8B826B8A1E8471D300AE9800 /* AcronymTableViewController.swift */,
+				8B826BB81E84872400AE9800 /* Supporting Files */,
 			);
 			path = Acronyms;
 			sourceTree = "<group>";
@@ -342,7 +342,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		10ECF3DC5F77805F2F27E5BC /* [CP] Embed Pods Frameworks */ = {
@@ -372,7 +372,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		4E771603D8413EB02F1FB484 /* [CP] Embed Pods Frameworks */ = {
@@ -417,7 +417,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A4B8EB613D1A0D8B7DB626A6 /* [CP] Copy Pods Resources */ = {
@@ -705,6 +705,7 @@
 				8B826BAF1E8471D300AE9800 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8B826BB01E8471D300AE9800 /* Build configuration list for PBXNativeTarget "AcronymsTests" */ = {
 			isa = XCConfigurationList;
@@ -713,6 +714,7 @@
 				8B826BB21E8471D300AE9800 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8B826BB31E8471D300AE9800 /* Build configuration list for PBXNativeTarget "AcronymsUITests" */ = {
 			isa = XCConfigurationList;
@@ -721,6 +723,7 @@
 				8B826BB51E8471D300AE9800 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
