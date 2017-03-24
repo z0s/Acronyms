@@ -99,11 +99,8 @@
 		8B826B871E8471D300AE9800 /* Acronyms */ = {
 			isa = PBXGroup;
 			children = (
-				8B826B881E8471D300AE9800 /* AppDelegate.swift */,
-				8B826B8F1E8471D300AE9800 /* Assets.xcassets */,
-				8B826B911E8471D300AE9800 /* LaunchScreen.storyboard */,
-				8B826B941E8471D300AE9800 /* Info.plist */,
 				8B826BB91E848A8200AE9800 /* Meaning.swift */,
+				8B826BB81E84872400AE9800 /* Supporting Files */,
 				8B826B8A1E8471D300AE9800 /* AcronymTableViewController.swift */,
 				8B826BB61E84870F00AE9800 /* APIManager.swift */,
 			);
@@ -126,6 +123,17 @@
 				8B826BAA1E8471D300AE9800 /* Info.plist */,
 			);
 			path = AcronymsUITests;
+			sourceTree = "<group>";
+		};
+		8B826BB81E84872400AE9800 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B826B881E8471D300AE9800 /* AppDelegate.swift */,
+				8B826B8F1E8471D300AE9800 /* Assets.xcassets */,
+				8B826B911E8471D300AE9800 /* LaunchScreen.storyboard */,
+				8B826B941E8471D300AE9800 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
